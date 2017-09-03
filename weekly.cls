@@ -106,15 +106,16 @@
 \newcommand{\maketitlew}[4]{
 \begin{center}
     \begin{minipage}{1.5cm}
-        \includegraphics[height=1.25cm]{shield}
+        \includegraphics[height=1.5cm]{shield}
     \end{minipage}
     \begin{minipage}{2.5cm}
         Иван Утешев\\
         621 группа
     \end{minipage}
     
-    \textbf{\large #1}\\
-    Задание #2. Неделя #3
+    \Large\textbf{#1}\\
+    \large Задание #2. Неделя #3
+    \smallskip
 \end{center}
 \setcounter{page}{#4}
 }

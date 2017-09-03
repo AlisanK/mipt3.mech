@@ -45,7 +45,7 @@ $e \cos\omega\varphi = \dfrac{p}{r} - 1$:
         = \frac{ec\omega}{p} \sin{\omega\varphi}, \\
     \ddot r &= \frac{ec\omega^2}{p} \cos\omega\varphi \cdot
         \frac{c}{r^2} = \frac{c^2 \omega^2}{pr^2}
-        \left( \frac{p}{r} - 1 \right).
+        \left( \frac{p}{r} - 1 \right)\!.
 \end{align}
 Совершив подстановку в~\eqref{1.20:wr}, получим
 \begin{align}
@@ -179,6 +179,68 @@ $r(\varphi) =
     \dfrac{H \sin\varphi}{\left( 1 + \cos\varphi \right)^2}$;\qquad
 $T = \dfrac{2H}{3v}$;\qquad
 $w(\varphi) = \dfrac{2v^2}{H} \left(1 + \cos\varphi\right)^2$.
+\hfill $\blacktriangleleft$
+
+
+\paragraph{1.37(б).} Найти скорость точки и~проекции её
+ускорения на~касательные к~координатным линиям
+для~сферических координат $r, \theta, \varphi$:
+\begin{equation}
+    \begin{cases}
+        x = r\sin\theta\cos\varphi, \\
+        y = r\sin\theta\sin\varphi, \\
+        z = r\cos\theta.
+    \end{cases}
+\end{equation}
+
+$\blacktriangleright$ Сначала найдём коэффициенты Ламе
+данной координатной системы:
+\begin{align}
+    H_r &= \sqrt{\left(\pdd{x}{r}\right)^2 +
+            \left(\pdd{y}{r}\right)^2 +
+            \left(\pdd{z}{r}\right)^2}
+        = \sqrt{\sin^2\theta \cos^2\varphi +
+            \sin^2\theta \sin^2\varphi +
+            \cos^2\theta} = 1; \\
+    H_\theta &= \sqrt{r^2 \cos^2\theta \cos^2\varphi +
+            r^2 \cos^2\theta \sin^2\varphi +
+            r^2 \sin^2\theta} = r; \\
+    H_\varphi &= \sqrt{r^2 \sin^2\theta \sin^2\varphi +
+            r^2 \sin^2\theta \cos^2\varphi} = r \sin\theta.
+\end{align}
+Квадрат модуля скорости точки в таком случае есть
+\begin{equation}
+    v^2 = \dot r^2 + r^2 \dot\theta^2 +
+            r^2 \sin^2\theta \cdot \dot\varphi^2;
+\end{equation}
+компоненты ускорения рассчитываются аналогично~\eqref{1.20:wr}:
+\begin{align}
+    w_r &= \frac{1}{2} \left[ \dd{}{t}
+            \left( \pdd{v^2}{\dot r} \right) -
+            \pdd{v^2}{r} \right]
+        = \ddot r - r \left( \dot\theta^2 +
+            \dot\varphi^2 \sin^2\theta \right)\!, \\
+    w_\theta &= \frac{1}{r} \left[ \dd{(r^2 \dot\theta)}{t} -
+            r^2 \sin\theta \cos\theta \cdot \dot\varphi^2 \right]
+        = r \ddot\theta + 2\dot\theta \dot r -
+            r^2 \dot\varphi^2 \sin\theta \cos\theta, \\
+    w_\varphi &= \frac{1}{r\sin\theta}
+            \dd{(r^2 \dot\varphi \sin^2\theta)}{t}
+        = (2 \dot r \dot\varphi + r \ddot\varphi) \sin\theta +
+            2r \dot\varphi \dot\theta \cos\theta.
+\end{align}
+
+\textbf{Ответ:}\quad
+$v = \sqrt{\dot r^2 + r^2 \dot\theta^2 +
+    r^2 \sin\theta^2 \cdot \dot\varphi^2}$,\qquad
+$w = \begin{pmatrix}
+    \ddot r - r \left( \dot\theta^2 +
+            \dot\varphi^2 \sin^2\theta \right) \\
+    r \ddot\theta + 2\dot\theta \dot r -
+            r^2 \dot\varphi^2 \sin\theta \cos\theta \\
+    (2 \dot r \dot\varphi + r \ddot\varphi) \sin\theta +
+            2r \dot\varphi \dot\theta \cos\theta
+\end{pmatrix}$.
 \hfill $\blacktriangleleft$
 
 \end{document}
