@@ -1,0 +1,70 @@
+\documentclass{weekly}
+\begin{document}
+\maketitlew{Аналитическая механика}{1}{1}{1}
+
+\paragraph{1.20.} В~некотором приближении орбиту Меркурия
+можно представить плоской розеткой, уравнение которой
+в~полярных координатах имеет вид
+\begin{equation}\label{1.20:tr}
+    r = \frac{p}{1+e\cos\omega\varphi}, \quad
+    \omega = \const \neq 1.
+\end{equation}
+Используя закон площадей $r^2 \dot\varphi = c = \const$,
+найти зависимость ускорения~$w$ планеты от~$r$.
+
+$\blacktriangleright$ Компоненты скорости
+в~полярной системе координат известны:
+\begin{align}
+    v_r &= H_r \dot r = \dot r, \\
+    v_\varphi &= H_\varphi \dot\varphi = r \dot\varphi; \\
+    v^2 &= v_r^2 + v_\varphi^2 = \dot r^2 + r^2 \dot\varphi^2.
+\end{align}
+Найдём компоненты разложения ускорения
+$\vec w = \vec w_r + \vec w_\varphi$:
+\begin{align}
+    w_r &= \frac{1}{2H_r}
+            \left[ \dd{}{t} \left(\pdd{v^2}{\dot r}\right) -
+            \pdd{v^2}{r} \right]
+        = \dd{\dot r}{t} - r \dot\varphi^2
+        = \ddot r - r\dot\varphi^2; \label{1.20:wr}\\
+    w_\varphi &= \frac{1}{2H_\varphi}
+            \left[ \dd{}{t} \left(\pdd{v^2}{\dot\varphi}\right) -
+            \pdd{v^2}{\varphi} \right]
+        = \frac{1}{r} \dd{(r^2 \dot\varphi)}{t}
+        = 2 \dot r \dot\varphi + r \ddot\varphi. \label{1.20:wphi}
+\end{align}
+Продифференцируем по~времени уравнение~\eqref{1.20:tr} с~учётом
+$\dot\varphi = \dfrac{c}{r^2}$ и
+$e \cos\omega\varphi = \dfrac{p}{r} - 1$:
+\begin{align}
+    \dot r &= \frac{pe\omega \sin\omega\varphi \cdot \dot\varphi}
+        {(1+e\cos\omega\varphi)^2}
+        = \frac{\cancel{r^2}}{p} e\omega \sin\omega\varphi \cdot
+            \frac{c}{\cancel{r^2}}
+        = \frac{ec\omega}{p} \sin{\omega\varphi}, \\
+    \ddot r &= \frac{ec\omega^2}{p} \cos\omega\varphi \cdot
+        \frac{c}{r^2} = \frac{c^2 \omega^2}{pr^2}
+        \left( \frac{p}{r} - 1 \right).
+\end{align}
+Совершив подстановку в~\eqref{1.20:wr}, получим
+\begin{align}
+    w_r = \frac{c^2 \omega^2}{pr^2} \left(\frac{p}{r}-1\right) -
+            \frac{c^2}{r^3}
+        = \frac{c^2}{pr^3} \left( p \omega^2 - r \omega^2 - p \right)
+        = -\frac{c^2}{pr^3} \left[ \omega^2 r +
+            \left( 1-\omega^2 \right) p \right].
+\end{align}
+\textsl{Примечание.} При $\omega \to 1$ приходим к~классическому
+ньютоновскому закону $\omega_r = -c^2/(pr^2)$.
+Осталось убедиться, что, как и~в~классическом случае, $w_\varphi = 0$.
+Это видно из выражения~\eqref{1.20:wphi} и~соотношения
+\begin{align}
+    r \ddot\varphi &= r \cdot \dd{}{t} \left( \frac{c}{r^2} \right)
+        = -\frac{2c}{r^2} \cdot \dot r = -2 \dot r \dot\varphi.
+\end{align}
+
+\textbf{Ответ:}\quad $w = \abs{w_r} = \dfrac{c^2}{pr^3} \cdot
+\left.\Big| \omega^2 r + \left( 1-\omega^2 \right) p \Big|\right.$.
+\hfill $\blacktriangleleft$
+
+\end{document}
