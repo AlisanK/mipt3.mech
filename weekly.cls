@@ -28,6 +28,7 @@
 \setlength    {\parskip}        { .5em plus .15em minus .08em }
 \setlength    {\parindent}      { .0em }
 \renewcommand {\baselinestretch}{ 1.07 }
+\hyphenpenalty=2000
 
 \RequirePackage{graphicx}
     \graphicspath{{img/}}

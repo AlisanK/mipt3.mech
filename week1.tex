@@ -15,8 +15,9 @@
 $\blacktriangleright$ Компоненты скорости
 в~полярной системе координат известны:
 \begin{align}
-    v_r &= H_r \dot r = \dot r, \\
-    v_\varphi &= H_\varphi \dot\varphi = r \dot\varphi; \\
+    v_r &= H_r \dot r = \dot r, \label{1.20:vr}\\
+    v_\varphi &= H_\varphi \dot\varphi = r \dot\varphi;
+        \label{1.20:vphi}\\
     v^2 &= v_r^2 + v_\varphi^2 = \dot r^2 + r^2 \dot\varphi^2.
 \end{align}
 Найдём компоненты разложения ускорения
@@ -56,6 +57,7 @@ $e \cos\omega\varphi = \dfrac{p}{r} - 1$:
 \end{align}
 \textsl{Примечание.} При $\omega \to 1$ приходим к~классическому
 ньютоновскому закону $\omega_r = -c^2/(pr^2)$.
+
 Осталось убедиться, что, как и~в~классическом случае, $w_\varphi = 0$.
 Это видно из выражения~\eqref{1.20:wphi} и~соотношения
 \begin{align}
@@ -65,6 +67,118 @@ $e \cos\omega\varphi = \dfrac{p}{r} - 1$:
 
 \textbf{Ответ:}\quad $w = \abs{w_r} = \dfrac{c^2}{pr^3} \cdot
 \left.\Big| \omega^2 r + \left( 1-\omega^2 \right) p \Big|\right.$.
+\hfill $\blacktriangleleft$
+
+\clearpage
+
+\begin{wrapfigure}[6]{r}{5cm}\vspace{1mm}
+    \includegraphics[width=5cm]{1-29}
+\end{wrapfigure}
+\paragraph{1.29.} Самолёт, изображённый на~рисунке точкой~$A$,
+движется горизонтально на~высоте~$H$ с~постоянной скоростью
+$\vec v_1 = \vec v$. В~момент, когда самолёт пролетает над~ракетной
+установкой, пускают самонаводящуюся ракету~$B$, имеющую скорость
+$\vec v_2$ и~всё время направленную к~точке~$A$, $\abs{\vec v_2} =
+2\abs{\vec{v}}$. Найти уравнение траектории ракеты $AB = r(\varphi)$
+в~системе отсчёта~$A\xi\eta$, движущейся вместе с~самолётом.
+Найти также время полёта ракеты с~момента вылета до~поражения
+самолёта и~её ускорение как~функцию угла~$\varphi$.
+
+$\blacktriangleright$ Радиальная и~трансверсальная скорости
+ракеты равны по~модулю соответствующим проекциям относительной
+скорости $(\vec v_2 - \vec v_1)$ вдоль и ортогонально~$AB$:
+\begin{align}
+    v_r &= -v_2 + v_1 \cos\varphi = -(2 - \cos\varphi)v,
+        \label{1.29:vr}\\
+    v_\varphi &= -v_1 \sin\varphi = -v \sin\varphi. \label{1.29:vphi}
+\end{align}
+Компоненты скорости в~полярной системе координат известны:
+вводя в систему уравнения~\eqref{1.20:vr} и~\eqref{1.20:vphi},
+получим
+\begin{gather}
+\begin{cases}
+    \dfrac{dr}{dt} = -(2 - \cos\varphi) v, \\[3mm]
+    \dfrac{d\varphi}{dt} = -\dfrac{v \sin\varphi}{r}
+\end{cases} \Longrightarrow \quad
+    \frac{dr}{r} = \frac{2-\cos\varphi}{\sin\varphi}\,d\varphi.
+        \label{1.29:deq}
+\end{gather}
+Последнее дифференциальное уравнение легко интегрируется:
+\begin{align}
+\tag*{\footnotesize(\ref{1.29:deq}$^\text{A}$)}
+    &\int \frac{dr}{r} = \ln r + \const; \\
+\tag*{\footnotesize(\ref{1.29:deq}$^\text{B}$)}
+    &\int \frac{d\varphi}{\sin\varphi}
+    = \int \frac{d\varphi}{\sin\frac{\varphi}{2}\cos\frac{\varphi}{2}}
+    = \int \frac{\cos\frac{\varphi}{2}}{\sin\frac{\varphi}{2}}
+    \frac{d\left(\frac{\varphi}{2}\right)}{\cos^2\frac{\varphi}{2}}
+    = \int \frac{d\tan\frac{\varphi}{2}}{\tan\frac{\varphi}{2}}
+    = \ln\tan\frac{\varphi}{2} + \const; \\[2mm]
+\tag*{\footnotesize(\ref{1.29:deq}$^\text{C}$)}
+    &\int \frac{\cos\varphi\,d\varphi}{\sin\varphi}
+    = \frac{d\sin\varphi}{\sin\varphi} = \ln\sin\varphi + \const.
+        \\[1ex]
+    &r = C_1 \frac{\tan^2\frac{\varphi}{2}}{\sin\varphi}
+    = C_1 \frac{\sin\varphi}{\left( 1 + \cos\varphi \right)^2}.
+        \label{1.29:r}
+\end{align}
+Константу интегрирования найдём из~начального условия
+$r\!\left(\dfrac{\pi}{2}\right) = H = C_1$.
+
+Для~нахождения времени заметим, что при~$r \to 0$
+полярный угол $\varphi \to 0$;
+\begin{align}
+    \dd{\varphi}{t} = -\frac{v}{H} \left(1+\cos\varphi\right)^2 \then
+    \frac{d\varphi}{\left(1+\cos\varphi\right)^2} = -\frac{v\,dt}{H}.
+        \label{1.29:deq2}
+\end{align}
+Очередное дифференциальное уравнение также интегрируется:
+\begin{align}
+\tag*{\footnotesize(\ref{1.29:deq2}$^\text{A}$)}
+\begin{split}
+    \int \frac{d\varphi}{\left(1+\cos\varphi\right)^2}
+        &= \frac{1}{2} \int \frac{d\left(\frac{\varphi}{2}\right)}
+            {\cos^4 \frac{\varphi}{2}}
+        = \frac{1}{2} \int \frac{1}{\cos^2 \frac{\varphi}{2}}
+            \frac{d\left(\frac{\varphi}{2}\right)}
+            {\cos^2 \frac{\varphi}{2}} \\
+        & \frac{1}{2} \int \left(1 + \tan^2 \frac{\varphi}{2}\right)
+            d\tan\frac{\varphi}{2}
+        = \frac{1}{2}\tan\frac{\varphi}{2} +
+            \frac{1}{6}\tan^3\frac{\varphi}{6} + C_2.
+\end{split} \\[1ex]
+    &t = -\frac{H}{v} \left( \frac{1}{2}\tan\frac{\varphi}{2} +
+            \frac{1}{6}\tan^3\frac{\varphi}{6} + C_2 \right)\!.
+\end{align}
+С~учётом $t\!\left(\dfrac{\pi}{2}\right) = 0$ найдём
+очередную константу дифференцирования $C_2 = -\dfrac{2}{3}$.
+Таким образом, искомое время полёта ракеты
+\begin{equation}
+    T = t(0) = \frac{2H}{3v}.
+\end{equation}
+
+Определим компоненты ускорения при~помощи~\eqref{1.20:wr}
+и~\eqref{1.20:wphi} с~учётом \eqref{1.29:vr}, \eqref{1.29:vphi}
+и~\eqref{1.29:r}:
+\begin{align}
+    w_r &= \ddot r - r \dot\varphi^2 = -v \sin\varphi \cdot
+            \left(-\frac{v \sin\varphi}{r}\right) -
+            \frac{v^2 \sin^2\varphi}{r} = 0; \\
+\begin{split}
+    w_\varphi &= r \ddot\varphi + 2 \dot r \dot\varphi
+        = \dd{(r \dot\varphi)}{t} + \dot r \dot\varphi
+        = -v \cos\varphi \cdot \dot\varphi +
+            (\cos\varphi - 2) v \cdot \dot\varphi \\
+        &= -2v \dot\varphi = \frac{2v^2 \sin\varphi}{r}
+        = \frac{2v^2}{H} \left( 1 + \cos\varphi \right)^2.
+\end{split}
+\end{align}
+
+\textbf{Ответ:}\quad
+$r(\varphi) =
+    \dfrac{H \sin\varphi}{\left( 1 + \cos\varphi \right)^2}$;\qquad
+$T = \dfrac{2H}{3v}$;\qquad
+$w(\varphi) = \dfrac{2v^2}{H} \left(1 + \cos\varphi\right)^2$.
 \hfill $\blacktriangleleft$
 
 \end{document}
