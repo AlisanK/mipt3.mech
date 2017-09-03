@@ -141,13 +141,13 @@ $r\!\left(\dfrac{\pi}{2}\right) = H = C_1$.
             {\cos^4 \frac{\varphi}{2}}
         = \frac{1}{2} \int \frac{1}{\cos^2 \frac{\varphi}{2}}
             \frac{d\left(\frac{\varphi}{2}\right)}
-            {\cos^2 \frac{\varphi}{2}} \\
-        & \frac{1}{2} \int \left(1 + \tan^2 \frac{\varphi}{2}\right)
+            {\cos^2 \frac{\varphi}{2}} = \\
+        &= \frac{1}{2} \int \left(1 + \tan^2 \frac{\varphi}{2}\right)
             d\tan\frac{\varphi}{2}
         = \frac{1}{2}\tan\frac{\varphi}{2} +
             \frac{1}{6}\tan^3\frac{\varphi}{6} + C_2.
 \end{split} \\[1ex]
-    &t = -\frac{H}{v} \left( \frac{1}{2}\tan\frac{\varphi}{2} +
+    t &= -\frac{H}{v} \left( \frac{1}{2}\tan\frac{\varphi}{2} +
             \frac{1}{6}\tan^3\frac{\varphi}{6} + C_2 \right)\!.
 \end{align}
 С~учётом $t\!\left(\dfrac{\pi}{2}\right) = 0$ найдём
@@ -208,7 +208,7 @@ $\blacktriangleright$ Сначала найдём коэффициенты Ла�
     H_\varphi &= \sqrt{r^2 \sin^2\theta \sin^2\varphi +
             r^2 \sin^2\theta \cos^2\varphi} = r \sin\theta.
 \end{align}
-Квадрат модуля скорости точки в таком случае есть
+Квадрат модуля скорости точки в~таком случае есть
 \begin{equation}
     v^2 = \dot r^2 + r^2 \dot\theta^2 +
             r^2 \sin^2\theta \cdot \dot\varphi^2;
@@ -223,7 +223,7 @@ $\blacktriangleright$ Сначала найдём коэффициенты Ла�
     w_\theta &= \frac{1}{r} \left[ \dd{(r^2 \dot\theta)}{t} -
             r^2 \sin\theta \cos\theta \cdot \dot\varphi^2 \right]
         = r \ddot\theta + 2\dot\theta \dot r -
-            r^2 \dot\varphi^2 \sin\theta \cos\theta, \\
+            r \dot\varphi^2 \sin\theta \cos\theta, \\
     w_\varphi &= \frac{1}{r\sin\theta}
             \dd{(r^2 \dot\varphi \sin^2\theta)}{t}
         = (2 \dot r \dot\varphi + r \ddot\varphi) \sin\theta +
@@ -232,15 +232,74 @@ $\blacktriangleright$ Сначала найдём коэффициенты Ла�
 
 \textbf{Ответ:}\quad
 $v = \sqrt{\dot r^2 + r^2 \dot\theta^2 +
-    r^2 \sin\theta^2 \cdot \dot\varphi^2}$,\qquad
+    r^2 \dot\varphi^2 \sin\theta^2}$;\qquad
 $w = \begin{pmatrix}
     \ddot r - r \left( \dot\theta^2 +
             \dot\varphi^2 \sin^2\theta \right) \\
     r \ddot\theta + 2\dot\theta \dot r -
-            r^2 \dot\varphi^2 \sin\theta \cos\theta \\
+            r \dot\varphi^2 \sin\theta \cos\theta \\
     (2 \dot r \dot\varphi + r \ddot\varphi) \sin\theta +
             2r \dot\varphi \dot\theta \cos\theta
 \end{pmatrix}$.
+\hfill $\blacktriangleleft$
+
+\clearpage
+
+\paragraph{1.41.} Точка движется по~поверхности сферы вдоль
+координатной линии сферической системы координат
+$\varphi (r=\const, \theta=\const)$ с~постоянной скоростью~$v$.
+Найти вектор кривизны траектории и~указать условия, при~которых
+траектория точки является геодезической.
+
+$\blacktriangleright$ При~решении настоящей задачи удобно
+воспользоваться ранее полученными в~1.37(б) результатами:
+\begin{equation}
+    \vec v = \vec v_r + \vec v_\theta + \vec v_\varphi
+        = \dot r\,\mathbf{e_r} + r\dot\theta\,\mathbf{e_\theta} +
+            r \dot\varphi \sin\theta\,\mathbf{e_\varphi}.
+\end{equation}
+Поскольку точка движется вдоль координатной линии $\varphi$,
+производные $\dot r$ и $\dot\theta = 0$, следовательно,
+векторы скорости и ускорения имеют разложения
+\begin{align}
+    \vec v &= r \dot\varphi \sin\theta\,\mathbf{e_\varphi}; \\
+    \vec w &= - r \dot\varphi^2 \sin^2\theta\,\mathbf{e_r} -
+            r \dot\varphi^2 \sin\theta
+                \cos\theta\,\mathbf{e_\theta} +
+            (2 \dot r \dot\varphi + r \ddot\varphi) \sin\theta
+                \,\mathbf{e_\varphi}.
+\end{align}
+Таким образом, базисный орт $\mathbf{e_\varphi}$ играет роль
+касательного вектора к траектории точки. Тогда нормальная
+компонента ускорения лежит в~плоскости
+$\left<\mathbf{e_r}, \mathbf{e_\theta}\right>$;
+вектор кривизны найдём делением последней на~квадрат скорости:
+\begin{align}
+    \vec{\omega_n} &= -r \dot\varphi^2 \sin\theta
+            \left( \sin\theta\,\mathbf{e_r} +
+            \cos\theta\,\mathbf{e_\theta} \right); \\
+    \vec{k} &= \frac{\vec\omega_n}{v^2}
+        = -\frac{\sin\theta\,\mathbf{e_r} +
+            \cos\theta\,\mathbf{e_\theta}}{r \sin\theta}
+        = -\frac{1}{r} \left( \mathbf{e_r} +
+            \frac{\mathbf{e_\theta}}{\tan\theta} \right).
+\end{align}
+
+Траектория точки является геодезической, если $\vec k$
+направлен по~нормали к поверхности сферы $r = \const$,
+а~стало быть~--- ортогонален $\mathbf{e_\theta}$
+и~$\mathbf{e_\varphi}$, что требует нулевых коэффициентов
+при~упомянутых ортах в~разложении~$\vec k$
+($\tan\theta \to \infty$).
+
+\textsl{Примечание.} Данное рассуждение подтверждает
+геометрически интуитивную идею о~том, что геодезическая параллель
+на~сфере, большой круг с~$\theta = \const$~--- это экватор.
+
+\textbf{Ответ:}\quad
+$\vec k = -\dfrac{1}{r} \left( \mathbf{e_r} +
+    \dfrac{\mathbf{e_\theta}}{\tan\theta} \right)$;\qquad
+при~условии $\theta = \dfrac{\pi}{2}$.
 \hfill $\blacktriangleleft$
 
 \end{document}
