@@ -302,4 +302,38 @@ $\vec k = -\dfrac{1}{r} \left( \mathbf{e_r} +
 при~условии $\theta = \dfrac{\pi}{2}$.
 \hfill $\blacktriangleleft$
 
+
+\paragraph{1.45.} Выразить орты сопровождающего трёхгранника
+$(\vec\tau, \vec n, \vec b)$ через вектор скорости~$\vec v$ и~вектор
+ускорения~$\vec w$ точки, если $\vec w \times \vec v \neq 0$,
+а $\vec\tau \cdot \vec v > 0$.
+
+$\blacktriangleright$ Первое условие $\vec w \times \vec v \neq 0$
+гарантирует $\vec w \nparallel \vec v$, а~второе означает
+<<естественную>> ориентацию трёхгранника ($\vec \tau \upuparrows
+\vec v$). В~таком случае,
+\begin{align}
+    \vec\tau &= \frac{d\vec r}{\abs{d\vec r}}
+        = \frac{d\vec r}{dt} \frac{dt}{\abs{d\vec r}}
+        = \frac{\vec v}{\abs{\vec v}}; \\
+    \vec n &= \frac{\vec w_n}{\abs{\vec w_n}}
+        = \frac{\vec w - \vec w_\tau}{\sqrt{(\vec w - \vec w_\tau)^2}}
+        = \frac{\vec w - (\vec w \cdot \vec\tau) \vec\tau}
+            {\sqrt{\vec w^2 - (\vec w \cdot \vec\tau)^2}}
+        = \frac{\vec w - (\vec w \cdot \vec\tau) \vec\tau}
+            {\abs{\vec w \times \vec\tau}}
+        = \frac{\abs{\vec v}^2 \vec w - (\vec w \cdot \vec v)\,\vec v}
+            {\abs{\vec v} \cdot \abs{\vec w \times \vec v}}; \\
+    \vec b &= \vec\tau \times \vec n
+        = \frac{\vec v \times \vec w}{\abs{\vec w \times \vec v}}
+        = \frac{\vec v \times \vec w}{\abs{\vec v \times \vec w}}.
+\end{align}
+
+\textbf{Ответ:}\quad $\vec\tau = \dfrac{\vec v}{\abs{\vec v}}$;\qquad
+$\vec n = \dfrac{\abs{\vec v}^2 \vec w -
+    (\vec w \cdot \vec v)\,\vec v}
+    {\abs{\vec v} \cdot \abs{\vec w \times \vec v}}$;\qquad
+$\vec b = \dfrac{\vec v \times \vec w}{\abs{\vec v \times \vec w}}$.
+\hfill $\blacktriangleleft$
+
 \end{document}
