@@ -2,7 +2,7 @@
 \ProvidesClass{weekly}
 \ProcessOptions
 
-\LoadClass[12pt, a4paper, oneside, final]{article}
+\LoadClass[12pt, a4paper, twoside, final]{article}
 
 \RequirePackage{mathtext}
 \RequirePackage{amsmath}
@@ -19,8 +19,9 @@
 \RequirePackage[T2A,OT1]           {fontenc}
 \RequirePackage[utf8]              {inputenc}
 \RequirePackage[english, russian]  {babel}
-\RequirePackage[ left     = 2.5cm,
-                 right    = 1.5cm,
+\RequirePackage{cmap}
+\RequirePackage[ innermargin = 2.5cm,
+                 outermargin = 1.5cm,
                  top      = 2.0cm,
                  bottom   = 1.25cm,
                  includefoot,
