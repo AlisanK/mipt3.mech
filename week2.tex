@@ -1,0 +1,35 @@
+\documentclass{weekly}
+\begin{document}
+\maketitlew{Аналитическая механика}{1}{2}{5}
+
+\paragraph{3.6.} Плоская фигура движется в~своей плоскости.
+Найти положение точки~$A$, если известны скорость этой точки~$\vec v_A$,
+скорость некоторой другой точки~$\vec v_0$ и~угловая скорость
+фигуры~$\vec\omega$. Использовать полученный результат для~определения
+положения мгновенного центра скоростей~$P$.
+
+$\blacktriangleright$ По~теореме о~распределении скоростей
+в~твёрдом теле
+\begin{equation}\label{3.6:vA}
+    \vec v_A = \vec v_0 + \vec\omega \times \overline{OA}.
+\end{equation}
+Умножим векторно уравнение~\eqref{3.6:vA} на~$\vec\omega$ слева:
+\begin{gather}
+    \vec\omega \times \left(\vec v_A - \vec v_0\right) =
+            \vec\omega \times \vec\omega \times \overline{OA}
+        = \vec\omega \cancelto{0}
+            {\left(\vec\omega, \overline{OA}\right)}\quad -
+            \overline{OA} \left(\vec\omega, \vec\omega\right)
+        = -\omega^2 \cdot \overline{OA}; \\[\parskip]
+    \overline{OA} = \frac{\vec\omega \times
+            \left(\vec v_0 - \vec v_A\right)}{\omega^2}.
+\end{gather}
+В~частности, для~мгновенного центра скоростей~$P$ можно записать
+$\vec v_P = \vec 0$.\\[-\parskip]
+
+\textbf{Ответ:}\quad $\overline{OA} = \dfrac{\vec\omega \times
+\left(\vec v_0 - \vec v_A\right)}{\omega^2}$;\qquad
+$\overline{OP} = \dfrac{\vec\omega \times \vec v_0}{\omega^2}$.
+\hfill $\blacktriangleleft$
+
+\end{document}
