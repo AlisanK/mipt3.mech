@@ -20,8 +20,8 @@
 \RequirePackage[utf8]              {inputenc}
 \RequirePackage[english, russian]  {babel}
 \RequirePackage{cmap}
-\RequirePackage[ innermargin = 2.5cm,
-                 outermargin = 1.5cm,
+\RequirePackage[ innermargin = 2.0cm,
+                 outermargin = 2.0cm,
                  top      = 2.0cm,
                  bottom   = 1.25cm,
                  includefoot,
