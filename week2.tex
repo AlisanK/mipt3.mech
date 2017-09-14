@@ -215,4 +215,107 @@ $\vec w_C = \cvec
     {-\frac{1}{2} v^2/r}{0}$.
 \hfill $\blacktriangleleft$
 
+
+\begin{wrapfigure}[7]{l}{4.3cm}\vspace{3mm}
+    \includegraphics[width=4.3cm]{3-33}
+\end{wrapfigure}
+\paragraph{3.33.} Стержни~$AC$ и~$BC$ длины~$l_1$ и~$l_2$
+соответственно, соединённые в~точке~$C$ шарниром, движутся
+в~плоскости. Известны скорости свободных концов стержней~$\vec v_A$
+и~$\vec v_B$, а~также их~ускорения~$\vec w_A$ и~$\vec w_B$.
+Найти угловые скорости и~угловые ускорения стержней, если
+угол между ними в~рассматриваемый момент времени равен~$\varphi$
+($0 < \varphi < \pi$).
+
+$\blacktriangleright$ Запишем скорость и~ускорение точки~$C$
+двумя способами:
+\begin{align}
+    \vec v_C &= \vec v_A + \vec\omega_1 \times \overline{AC},
+        \label{3.33:vC1}\\
+    \vec v_C &= \vec v_B + \vec\omega_2 \times \overline{BC};
+        \label{3.33:vC2}\\[1.5ex]
+    \vec w_C &= \vec w_A + \vec\varepsilon_1 \times \overline{AC} -
+        \omega_1^2 \cdot \overline{AC}, \label{3.33:wC1}\\
+    \vec w_C &= \vec w_B + \vec\varepsilon_2 \times \overline{BC} -
+        \omega_2^2 \cdot \overline{BC}. \label{3.33:wC2}
+\end{align}
+
+Умножим уравнения~\eqref{3.33:vC1} и~\eqref{3.33:vC2} скалярно
+на~$\overline{BC}$ и~исключим~$\vec v_C$:
+\begin{gather}
+    \left(\vec v_A, \overline{BC}\right) +
+            \left(\overline{BC}, \vec\omega_1, \overline{AC}\right)
+        = \left(\vec v_B, \overline{BC}\right) +
+            \cancel{\left(\overline{BC},
+            \vec\omega_2, \overline{BC}\right)}, \\
+    \left(\vec\omega_1, \overline{BC}, \overline{AC}\right)
+        = \left(\vec v_A - \vec v_B, \overline{BC}\right), \\
+    \omega_1 = \frac{\left(\vec v_A - \vec v_B\right)\cdot\overline{BC}}
+        {l_1 l_2 \sin\varphi}.
+\end{gather}
+Для~нахождения другой угловой скорости умножим те~же уравнения
+скалярно на~$\overline{AC}$:
+\begin{gather}
+    \left(\vec v_A, \overline{AC}\right) +
+            \cancel{\left(\overline{AC},
+            \vec\omega_1, \overline{AC}\right)}
+        = \left(\vec v_B, \overline{AC}\right) +
+            \left(\overline{AC}, \vec\omega_2, \overline{BC}\right), \\
+    \left(\vec\omega_1, \overline{AC}, \overline{BC}\right)
+        = \left(\vec v_B - \vec v_A, \overline{AC}\right), \\
+    \omega_2 = \frac{\left(\vec v_B - \vec v_A\right)\cdot\overline{AC}}
+        {l_1 l_2 \sin\varphi}.
+\end{gather}
+
+Теперь умножим уравнения~\eqref{3.33:wC1} и~\eqref{3.33:wC2}
+скалярно на~$\overline{BC}$ и~исключим~$\vec w_C$:
+\begin{gather}
+    \left(\vec w_A, \overline{BC}\right) +
+            \left(\overline{BC}, \vec\varepsilon_1,
+            \overline{AC}\right) -
+            \omega_1^2 \cdot \left(\overline{AC}, \overline{BC}\right)
+        = \left(\vec w_B, \overline{BC}\right) %+
+            %\cancel{\left(\overline{BC}, \vec\varepsilon_2,
+            %\overline{BC}\right)}
+            - \omega_2^2 \cdot \left(\overline{BC},
+            \overline{BC}\right), \\
+    \varepsilon_1 = \frac{\left(\vec w_B - \vec w_A\right) \cdot
+            \overline{BC} - \omega_2^2 l_2^2 +
+            \omega_1^2 l_1 l_2 \cos\varphi}{l_1 l_2 \sin\varphi}.
+\end{gather}
+Аналогично для~$\varepsilon_2$:
+\begin{gather}
+    \left(\vec w_A, \overline{AC}\right) %+
+            %\cancel{\left(\overline{AC}, \vec\varepsilon_1,
+            %\overline{AC}\right)}
+            - \omega_1^2 \cdot \left(\overline{AC}, \overline{AC}\right)
+        = \left(\vec w_B, \overline{AC}\right) +
+            \left(\overline{AC}, \vec\varepsilon_2,
+            \overline{BC}\right) -
+            \omega_2^2 \cdot \left(\overline{AC},
+            \overline{BC}\right), \\
+    \varepsilon_2 = \frac{\left(\vec w_B - \vec w_A\right) \cdot
+            \overline{AC} + \omega_1^2 l_1^2 -
+            \omega_2^2 l_1 l_2 \cos\varphi}{l_1 l_2 \sin\varphi}.
+\end{gather}
+
+\textsl{Примечание.} Направления искомых векторов
+без ограничения общности можно установить,
+используя частный случай, например, ситуацию, когда
+точка $C$ является мгновенным центром скоростей стержней.
+Безусловно, эти векторы ортогональны плоскости рисунка.
+
+\textbf{Ответ:}\quad
+$\omega_1 = \dfrac{\left(\vec v_A - \vec v_B\right)\cdot\overline{BC}}
+    {l_1 l_2 \sin\varphi}$;\qquad
+$\omega_2 = \dfrac{\left(\vec v_B - \vec v_A\right)\cdot\overline{AC}}
+    {l_1 l_2 \sin\varphi}$;\\[1.5ex]
+$\varepsilon_1 = \dfrac{\left(\vec w_B - \vec w_A\right) \cdot
+    \overline{BC} - \omega_2^2 l_2^2 +
+    \omega_1^2 l_1 l_2 \cos\varphi}{l_1 l_2 \sin\varphi}$;\qquad
+$\varepsilon_2 = \dfrac{\left(\vec w_B - \vec w_A\right) \cdot
+    \overline{AC} + \omega_1^2 l_1^2 -
+    \omega_2^2 l_1 l_2 \cos\varphi}{l_1 l_2 \sin\varphi}$.
+\hfill $\blacktriangleleft$
+
 \end{document}
