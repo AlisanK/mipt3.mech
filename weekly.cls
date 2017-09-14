@@ -74,7 +74,7 @@
 \renewcommand{\iff}     {\quad \Longleftrightarrow \quad}
 \newcommand  {\then}    {\quad \Longrightarrow \quad}
 \newcommand  {\subst}[1]{\begin{Vmatrix} #1 \end{Vmatrix}}
-\newcommand  {\qed}     {\hfill\ensuremath{\square}}
+\newcommand  {\qed}     {\hfill\ensuremath{\blacksquare}}
 
 \newcommand  {\const}{\ensuremath{\mathrm{const}}}
 \renewcommand{\Re}   {\operatorname{Re}}
@@ -82,6 +82,7 @@
 \DeclareMathOperator {\Ker}{Ker}
 \DeclareMathOperator {\Rg} {Rg}
 \DeclareMathOperator {\Int}{int}
+\newcommand{\cvec}[3]{\small\begin{pmatrix}#1\\#2\\#3\end{pmatrix}}
 
 \makeatletter
 \newenvironment{sqcases}{%
