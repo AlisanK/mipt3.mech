@@ -192,4 +192,69 @@ $\hat y$~--- вправо, $\hat z = \hat x \times \hat y$.
 \textbf{Ответ:}\quad \eqref{2.14:vA}, \eqref{2.14:wA}.
 \hfill $\blacktriangleleft$
 
+
+\begin{wrapfigure}[6]{r}{7cm}\vspace{-5.5mm}
+    \includegraphics[width=\lw]{3-22}
+\end{wrapfigure}
+\paragraph{3.22.} Диск радиуса~$R$ катится без~скольжения
+по~направляющей~$AB$, вращающейся в~вертикальной плоскости
+с~постоянной угловой скоростью~$\omega$. Найти скорости
+и~ускорения точек~$1, 2, 3, 4$ диска, если относительная
+скорость его центра постоянна и~равна~$v_0$.
+В~начальный момент точка касания диска с~направляющей
+совпадала с~точкой~$A$.
+
+$\blacktriangleright$ В~подвижной системе отсчёта направляющей
+скорости и~ускорения указанных точек
+равны соответственно (см.~задачу~2.11)
+\begin{align}
+    \vec v'_i &= \vec\Omega' \times \vec r_{1i}, \\
+    \vec w'_i &= -\Omega'^2 \vec r_{0i};
+\end{align}
+где~$\Omega' = v_0/R$~--- угловая скорость вращения диска.
+
+Используем теоремы о~сложении скоростей и~ускорений:
+\begin{align}
+    \vec v_i &= \vec\omega \times \vec r_{Ai} + \vec v'_i
+        = \vec\omega \times \vec r_{A1} +
+            \left(\vec\omega + \vec\Omega'\right) \times \vec r_{1i};
+\\
+    \vec w_i &= \omega \times \omega \times \vec r_{Ai} + \vec w'_i +
+            2\vec\omega \times \vec v'_i
+        = -\omega^2 \vec r_{A1} +
+            \left(\omega - 2\Omega'\right)\omega \vec r_{01} -
+            \left(\omega - \Omega'\right)^2 \vec r_{0i}.
+\end{align}
+
+Зададимся целью получить ответы в~адекватном виде.
+Для этого введём систему координат следующим образом:
+$Ax \upuparrows AB$, $Ay \perp AB$ и~направлена вверх,
+$\hat z = \hat x \times \hat y$.
+В~этой системе все нужные векторы имеют <<красивый>> вид:
+\begin{align}
+    \vec\omega &= \omega \hat z; \\
+    \vec\Omega' &= -\frac{v_0}{R} \hat z; \\
+    \vec r_{A1} &= v_0 t \cdot \hat x;
+\end{align}\vspace{-6ex}
+\begin{align}
+    \vec r_{01} &= -R \hat y, &
+    \vec r_{02} &= -R \hat x, &
+    \vec r_{03} &= +R \hat y, &
+    \vec r_{04} &= +R \hat x.
+\end{align}
+
+Найдём окончательные выражения
+для~$\vec v_3$ и~$\vec w_3$, чтобы проверить себя.
+\begin{align}
+    \vec v_3 &= \omega v_0 t \cdot \hat z \times \hat x +
+            2(\omega R - v_0) \cdot \hat z \times \hat y
+        = \cvec{2(v_0 - \omega R)}{\omega v_0 t}{0}; \\
+    \vec w_3 &= -\omega^2 v_0 t \cdot \hat x -
+            \left(\omega - \frac{2v_0}{R}\right)\omega R \cdot \hat y-
+            \left(\omega - \frac{v_0}{R}\right)^2 R \cdot \hat y
+        = -\cvec{\omega^2 v_0 t}{2\omega^2 R - 4v_0 \omega +
+            \frac{v_0^2}{R}}{0}.
+\end{align}
+\textbf{Задача решена.} \hfill $\blacktriangleleft$
+
 \end{document}
