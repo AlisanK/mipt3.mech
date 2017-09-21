@@ -97,4 +97,99 @@ $\vec v_i = \vec v'_i + \vec v$.
 \eqref{2.11:w1}~-- \eqref{2.11:w4}.
 \hfill $\blacktriangleleft$
 
+
+\begin{wrapfigure}[6]{r}{4cm}\vspace{-5.5mm}
+    \includegraphics[width=\lw]{2-14}
+\end{wrapfigure}
+\paragraph{2.14.} Круговое кольцо, точка~$O$ которого неподвижна,
+совершает колебания в~своей плоскости по~закону
+$\varphi = \varphi_0 \sin\omega t$. Радиус кольца равен~$R$.
+Точка~$A$ движется по~кольцу так, что~$s = at^2$, где~$s$~---
+длина дуги~$O_1 A$. Найти скорость и~ускорение точки~$A$
+в~момент времени~$t = \pi/\omega$.
+
+$\blacktriangleright$ В~заданный момент времени линия~$OO_1$ отвесна.
+Введём декартову систему координат: $\hat x \upuparrows OO_1$,
+$\hat y$~--- вправо, $\hat z = \hat x \times \hat y$.
+
+В~системе отсчёта кольца
+\begin{equation}
+\begin{cases}
+    x_A = R \left( 1 + \cos\dfrac{s}{R} \right), \\[2mm]
+    y_A = R \sin\dfrac{s}{R}.
+\end{cases}
+\end{equation}
+Дифференцируя эти выражения по~времени, получим
+компоненты скорости и~ускорения точки~$A$ в~этой системе:
+\begin{equation}
+\begin{cases}
+    \dot x_A = -\sin\dfrac{s}{R} \cdot 2at, \\[4mm]
+    \dot y_A = \cos\dfrac{s}{R} \cdot 2at;
+\end{cases} \then
+\begin{cases}
+    \ddot x_A = -\cos\dfrac{s}{R} \cdot \dfrac{4a^2 t^2}{R} -
+            \sin\dfrac{s}{R} \cdot 2a, \\[4mm]
+    \ddot y_A = -\sin\dfrac{s}{R} \cdot \dfrac{4a^2 t^2}{R} +
+            \cos\dfrac{s}{R} \cdot 2a.
+\end{cases}
+\end{equation}
+
+Угловая скорость и~угловое ускорение кольца
+\begin{align}
+    \vec\Omega &= -\varphi_0 \omega \hat z; \\
+    \vec\varepsilon &= +\varphi_0 \omega^2 \hat z.
+\end{align}
+
+Можем теперь применить теоремы о~сложении скоростей и~ускорений:
+\begin{align}
+\begin{split}
+    \vec v_A &= \vec\Omega \times \vec r_A + \vec v'_A = \\
+        &= -\varphi_0 \omega R \hat z \times
+            \cvec{1 + \cos\frac{at^2}{R}}
+            {\sin\frac{at^2}{R}}{0} +
+            2at \cvec{-\sin\frac{at^2}{R}}{\cos\frac{at^2}{R}}{0}
+        = \cvec{\left[\varphi_0 \omega R -
+            \frac{2a\pi}{\omega} \right]\sin\frac{a\pi^2}{\omega^2 R}}
+            {-2\varphi_0 \omega R \cos^2\frac{a\pi^2}{2\omega^2 R} +
+            \frac{2a\pi}{\omega} \cos\frac{a\pi^2}{\omega^2 R}}{0}.
+        \label{2.14:vA}
+\end{split}
+\end{align}
+\textsl{Примечание.} Проверка совпадения модуля~$\vec v_A$
+с~ответом из~задачника представляет собой
+весьма занимательное занятие. На~сей раз с~этим
+помогает справиться~Wolfram Alpha. \emph{Для~$\vec w_A$
+аналогичная проверка производиться не~будет.}
+\begin{align}
+\begin{split}
+    \vec w_A &= \vec\varepsilon \times \vec r_A -
+            \Omega^2 \vec r_A + \vec w_A' +
+            2\vec\Omega \times \vec v_A'
+        = \varphi_0 \omega^2 \hat z \times
+            \cvec{1 + \cos\frac{at^2}{R}}{\sin\frac{at^2}{R}}{0} -\\&- \varphi_0^2 \omega^2
+            \cvec{1 + \cos\frac{at^2}{R}}{\sin\frac{at^2}{R}}{0} +
+            \cvec{-\frac{4a^2 t^2}{R}\cos\frac{at^2}{R} -
+            2a\sin\frac{at^2}{R}}
+            {-\frac{4a^2 t^2}{R}\sin\frac{at^2}{R} +
+            2a\cos\frac{at^2}{R}}{0} -
+            2\varphi_0 \omega \hat z \times
+            2at \cvec{-\sin\frac{at^2}{R}}{\cos\frac{at^2}{R}}{0} = \\
+        &= \cvec
+            {-\varphi_0\omega^2\sin\frac{a\pi^2}{\omega^2 R} -
+                2\varphi_0^2\omega^2\cos^2\frac{a\pi^2}{2\omega^2 R}-
+                \frac{4a^2 t^2}{R}\cos\frac{at^2}{R} -
+                2a\sin\frac{at^2}{R} +
+                4\varphi_0\pi\omega a \cos\frac{a\pi^2}{\omega^2 R}}
+            {2\varphi_0\omega^2\cos^2\frac{a\pi^2}{2\omega^2 R} -
+                \varphi_0^2\omega^2\sin\frac{a\pi^2}{\omega^2 R} -
+                \frac{4a^2 t^2}{R}\sin\frac{at^2}{R} +
+                2a\cos\frac{at^2}{R} +
+                4\varphi_0\pi\omega a \sin\frac{a\pi^2}{\omega^2 R}}
+            {0}. \label{2.14:wA}
+\end{split}
+\end{align}
+
+\textbf{Ответ:}\quad \eqref{2.14:vA}, \eqref{2.14:wA}.
+\hfill $\blacktriangleleft$
+
 \end{document}
