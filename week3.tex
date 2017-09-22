@@ -217,13 +217,16 @@ $\blacktriangleright$ В~подвижной системе отсчёта нап
 \begin{align}
     \vec v_i &= \vec\omega \times \vec r_{Ai} + \vec v'_i
         = \vec\omega \times \vec r_{A1} +
-            \left(\vec\omega + \vec\Omega'\right) \times \vec r_{1i};
+            \left(\vec\omega + \vec\Omega'\right) \times
+            \left(\vec r_{0i} - \vec r_{01}\right);
+        \label{3.22:vi}
 \\
     \vec w_i &= \omega \times \omega \times \vec r_{Ai} + \vec w'_i +
             2\vec\omega \times \vec v'_i
-        = -\omega^2 \vec r_{A1} +
-            \left(\omega - 2\Omega'\right)\omega \vec r_{01} -
+        = \underline{-\omega^2 \vec r_{A1} +
+            \left(\omega - 2\Omega'\right)\omega \vec r_{01}} -
             \left(\omega - \Omega'\right)^2 \vec r_{0i}.
+        \label{3.22:wi}
 \end{align}
 
 Зададимся целью получить ответы в~адекватном виде.
@@ -232,20 +235,27 @@ $Ax \upuparrows AB$, $Ay \perp AB$ и~направлена вверх,
 $\hat z = \hat x \times \hat y$.
 В~этой системе все нужные векторы имеют <<красивый>> вид:
 \begin{align}
-    \vec\omega &= \omega \hat z; \\
-    \vec\Omega' &= -\frac{v_0}{R} \hat z; \\
-    \vec r_{A1} &= v_0 t \cdot \hat x;
-\end{align}\vspace{-6ex}
-\begin{align}
-    \vec r_{01} &= -R \hat y, &
-    \vec r_{02} &= -R \hat x, &
-    \vec r_{03} &= +R \hat y, &
+    \vec\omega &= \omega \hat z, \\
+    \vec\Omega' &= -\frac{v_0}{R} \hat z; \\[1.5ex]
+    \vec r_{A1} &= v_0 t \cdot \hat x;\\
+    \vec r_{01} &= -R \hat y, \\
+    \vec r_{02} &= -R \hat x, \\
+    \vec r_{03} &= +R \hat y, \\
     \vec r_{04} &= +R \hat x.
 \end{align}
 
-Найдём окончательные выражения
-для~$\vec v_3$ и~$\vec w_3$, чтобы проверить себя.
+Осталось произвести вычисления по~формулам~\eqref{3.22:vi}
+и~\eqref{3.22:wi}. \hfill $\blacktriangleleft$
+
+\textsl{Например,}
 \begin{align}
+    \vec v_1 &= \omega v_0 t \cdot \hat z \times \hat x
+        = \omega v_0 t \cdot \hat y; \\
+    \vec w_1 &= -\omega^2 v_0 t \cdot \hat x -
+            \left(\omega - \frac{2v_0}{R}\right)\omega R \cdot \hat y+
+            \left(\omega - \frac{v_0}{R}\right)^2 R \cdot \hat y
+        = \cvec{-\omega^2 v_0 t}{v_0^2/R}{0}.
+\\[2ex]
     \vec v_3 &= \omega v_0 t \cdot \hat z \times \hat x +
             2(\omega R - v_0) \cdot \hat z \times \hat y
         = \cvec{2(v_0 - \omega R)}{\omega v_0 t}{0}; \\
@@ -255,9 +265,9 @@ $\hat z = \hat x \times \hat y$.
         = -\cvec{\omega^2 v_0 t}{2\omega^2 R - 4v_0 \omega +
             \frac{v_0^2}{R}}{0}.
 \end{align}
-\textbf{\textit{Задача решена.}} \hfill $\blacktriangleleft$
 
 
+\bigskip
 \begin{wrapfigure}[6]{r}{3.3cm}\vspace{-6mm}
     \includegraphics[width=\lw]{4-4}
 \end{wrapfigure}
@@ -333,7 +343,7 @@ $\hat z = \hat x \times \hat y$. В~таких координатах
         \Omega = \frac{\sqrt{2}v}{R}. \label{4.34:vC}
 \end{equation}
 
-Подставив~\eqref{4.34:vC} в~\eqref{4.34:w_raw}, получим
+Подстановка~\eqref{4.34:vC} в~\eqref{4.34:w_raw} даёт
 \begin{align}
     \vec w &= -\cvec{\sqrt{2}}{0}{2} \frac{v^2}{R}; \\
     w &= \frac{\sqrt{6} v^2}{R}.
