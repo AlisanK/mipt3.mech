@@ -82,4 +82,50 @@ $\vec{\mathscr{E}} = -\sqrt{3} \left( \varepsilon \hat x +
 \omega^2 \hat y \right)$;\qquad \eqref{4.10:wA} -- \eqref{4.10:wB}.
 \hfill $\blacktriangleleft$
 
+
+\begin{wrapfigure}[13]{l}{6cm}\vspace{-2mm}
+    \includegraphics[width=\lw]{4-25}
+\end{wrapfigure}
+\paragraph{4.25.} Горизонтальная плоскость вращается вокруг
+вертикальной оси~$Oz$ с~угловой скоростью~$\omega(t)$.
+Конус, вершина~$O_1$ которого неподвижна относительно плоскости,
+катится по~ней без~скольжения. Центр основания конуса~$C$
+движется равномерно относительно плоскости со~скоростью~$\vec v$.
+Найти угловую скорость и~угловое ускорение конуса.
+Высота конуса~$h$, угол при~вершине~$2\beta$.
+
+$\blacktriangleright$ Перейдём в~систему отсчёта, вращающуюся
+вместе с~плоскостью. В~ней конус совершает мгновенное вращение
+с~некоторой угловой скоростью~$\omega_1$ вокруг $O_1A$,
+так~что по~формуле Эйлера
+\begin{align}
+    v = \omega_1 \cdot h \tan\beta
+            \sin\left(\frac{\pi}{2} - \beta\right)
+        = \omega_1 h \sin\beta.
+\end{align}
+
+Вектор~$\vec\omega_1$ вращается в~подвижной системе отсчёта
+с~угловой скоростью~$\vec\omega_2$, направленной
+против~$Oz$, модуль которой
+\begin{equation}
+    \omega_2 = \frac{v}{h\cos\beta}.
+\end{equation}
+
+В~неподвижной системе отсчёта
+\begin{align}
+    \vec\Omega &= \vec\omega + \vec\omega_1, &
+    \abs{\vec\Omega} &= \sqrt{\omega^2 + \frac{v^2}{h^2\sin^2\beta}};
+    \label{4.25:Omega}
+\\
+    \vec{\mathscr{E}} &= \dot{\vec\omega} +
+            \left(\vec\omega + \vec\omega_2\right) \times \vec\omega_1, &
+    \abs{\vec{\mathscr{E}}} &= \sqrt{\dot\omega^2 +
+            \frac{v^2}{h^2\sin^2\beta}
+            \left(\omega - \frac{v}{h\cos\beta}\right)^2}.
+    \label{4.25:Eps}
+\end{align}
+
+\textbf{Ответ:}\quad \eqref{4.25:Omega} -- \eqref{4.25:Eps}.
+\hfill $\blacktriangleleft$
+
 \end{document}
