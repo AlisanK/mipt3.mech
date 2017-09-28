@@ -243,4 +243,84 @@ $\blacktriangleright$
 \textbf{Ответ:}\quad $w_M = \sqrt{3}\omega^2 r$;\qquad
 $w_N = 7\omega^2 r$. \hfill $\blacktriangleleft$
 
+
+\begin{wrapfigure}[9]{l}{4.7cm}
+    \includegraphics[width=\lw]{4-45}
+\end{wrapfigure}
+\paragraph{4.45.} Тело участвует одновременно в~трёх винтовых
+движениях, оси которых расположены по~диагоналям граней куба
+(см.~рис.). Найти результирующее движение тела, если
+$\abs{\vec\omega_i} = \omega$, $\abs{\vec v_i} = v$.
+Ребро куба равно~$a$.
+
+$\blacktriangleright$ Рассмотрим произвольную точку тела~$A$
+и~найдём её скорость:
+\begin{align}
+\begin{split}
+    \vec v_A &= \vec v_1 + \vec\omega_1 \times \vec r_{1A} +
+            \vec v_2 + \vec\omega_2 \times \vec r_{2A} +
+            \vec v_3 + \vec\omega_3 \times \vec r_{3A} = \\
+        &= \left(\vec v_1 + \vec v_2 + \vec v_3 +
+            \vec\omega_2 \times \vec r_{21} +
+            \vec\omega_3 \times \vec r_{31}\right) +
+            \left(\vec\omega_1 + \vec\omega_2 + \vec\omega_3\right)
+            \times \vec r_{1A}.
+\end{split}
+\end{align}
+Выберем для~определённости в~качестве рассматриваемой точки полюс~$O$
+и~проведём некоторые вычисления:
+\begin{align}
+    \vec\omega_1 + \vec\omega_2 + \vec\omega_3 &=
+            \left[ \cvec{1/\sqrt{2}}{0}{1/\sqrt{2}} +
+            \cvec{0}{-1/\sqrt{2}}{1/\sqrt{2}} +
+            \cvec{-1/\sqrt{2}}{1/\sqrt{2}}{0} \right] \omega
+        = \cvec{0}{0}{\sqrt{2}} \omega; \label{4.45:omegasum}
+\\
+\begin{split}
+    \vec v_O &= \left[ \cvec{1/\sqrt{2}}{0}{1/\sqrt{2}} +
+            \cvec{0}{-1/\sqrt{2}}{1/\sqrt{2}} +
+            \cvec{1/\sqrt{2}}{-1/\sqrt{2}}{0} \right] v ~+\\
+        &+ \left[ \cvec{0}{-1/\sqrt{2}}{1/\sqrt{2}} \times
+            \cvec{-1}{0}{0} + \cvec{-1/\sqrt{2}}{1/\sqrt{2}}{0}
+            \times \cvec{-1}{1}{-1} + \cvec{0}{0}{\sqrt{2}} \times
+            \cvec{0}{-1}{0} \right] \omega a = \\
+        &= \sqrt{2} \cvec{1}{-1}{1} v +
+            \frac{1}{\sqrt{2}} \cvec{1}{-2}{-1} \omega a
+        = \cvec{2v + \omega a}{-2v - 2\omega a}{2v - \omega a}
+            \Big/ \sqrt{2}.
+\end{split}
+\end{align}
+
+Ищем кинематический винт:
+\begin{equation}
+    \vec v_O + \vec\omega \times \overline{OS} = p\vec\omega,
+\end{equation}
+где~$S$~--- точка на~оси винта. Это~--- уравнение прямой.
+Запишем его в~более определённом, а~лучше~--- каноническом виде:
+\begin{equation}
+    \frac{v_{Ox} + \left(\xcancel{\omega_y z} - \omega_z y\right)}
+        {\xcancel{\omega_x}} =
+    \frac{v_{Oy} + \left(\omega_z x - \xcancel{\omega_x z}\right)}
+        {\xcancel{\omega_y}} =
+    \boxed{\frac{v_{Oz} + \left(\omega_x y - \omega_y x\right)}
+        {\omega_z}}.
+\end{equation}
+
+\textsl{Примечание.} Результирующая угловая скорость найдена
+в~\eqref{4.45:omegasum}, поступательная скорость найдётся
+с~учётом связи векторной и~канонической формы уравнения прямой
+(нужная часть заключена в~рамку), остальную работу сделала
+аналитическая геометрия.
+
+\textbf{Ответ:}\quad винтовое движение с~$\omega' = \sqrt{2}\omega$
+и~$v' = \dfrac{2v - \omega a}{\sqrt{2}}$ вокруг
+$
+\begin{cases}
+    x = \dfrac{v}{\omega} + a; \\[2ex]
+    y = \dfrac{v}{\omega} + \dfrac{a}{2}.
+\end{cases}
+$
+\hfill $\blacktriangleleft$
+
+
 \end{document}
