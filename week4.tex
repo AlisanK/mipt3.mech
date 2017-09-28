@@ -128,4 +128,70 @@ $\blacktriangleright$ Перейдём в~систему отсчёта, вра�
 \textbf{Ответ:}\quad \eqref{4.25:Omega} -- \eqref{4.25:Eps}.
 \hfill $\blacktriangleleft$
 
+
+\paragraph{4.29.} При~движении твёрдого тела известны ускорение
+точки~$O$ тела~$\vec w_O$, угловая скорость~$\vec\omega$
+и~угловое ускорение~$\vec\varepsilon$,
+причём~$\vec\omega \times \vec\varepsilon \neq 0$.
+Найти точку, ускорение которой равно заданному вектору~$\vec w$.
+
+$\blacktriangleright$ По~формуле Ривальса
+\begin{equation}
+    \vec w - \vec w_O = \vec\varepsilon \times \vec r +
+            \vec\omega \times \vec\omega \times \vec r. \label{4.29:ww}
+\end{equation}
+Разложим радиус-вектор искомой точки следующим образом:
+\begin{equation}
+    \vec r = \alpha \vec\omega + \beta \vec\varepsilon +
+            \gamma \left[\vec\omega \times \vec\varepsilon\right],
+\end{equation}
+а~затем подставим последнее выражение в~\eqref{4.29:ww}.
+
+\begin{align}
+\begin{split}
+    \vec w - \vec w_O &= \vec\varepsilon \times
+            \left(\alpha \vec\omega + \beta \vec\varepsilon +
+            \gamma \left[\vec\omega \times \vec\varepsilon\right]\right)
+            + \vec\omega \times \vec\omega \times
+            \left(\alpha \vec\omega + \beta \vec\varepsilon +
+            \gamma \left[\vec\omega \times \vec\varepsilon\right]\right)
+        =\\&= \alpha \left[\vec\varepsilon \times \vec\omega\right] +
+            \gamma \left[\vec\varepsilon \times \vec\omega \times
+            \vec\varepsilon\right] + \beta \left[\vec\omega \times
+            \vec\omega \times \vec\varepsilon\right] +
+            \gamma \left[\vec\omega \times \vec\omega \times \vec\omega
+            \times\vec\varepsilon\right] =\\
+        &= -\alpha \left[\vec\omega \times \vec\varepsilon\right] +
+            \gamma \left(\varepsilon^2 \vec\omega - \vec\varepsilon
+            \left(\vec\omega, \vec\varepsilon\right)\right) +
+            \beta \left(\vec\omega \left(\vec\omega,
+            \vec\varepsilon\right) - \omega^2\vec\varepsilon\right) +\\
+        &\qquad+ \gamma\left[\vec\omega \times
+            \left(\cancel{\vec\omega \left(\vec\omega,
+            \vec\varepsilon\right)} -
+            \omega^2\vec\varepsilon\right)\right] =\\
+        &= \left\{\gamma\varepsilon^2 + \beta\left(\vec\omega,
+            \vec\varepsilon\right)\right\} \vec\omega -
+            \left\{\gamma\left(\vec\omega, \vec\varepsilon\right) +
+            \beta\omega^2\right\} \vec\varepsilon -
+            \left\{\alpha + \gamma\omega^2\right\} \left[\vec\omega
+            \times \vec\varepsilon\right].
+\end{split}
+\end{align}
+\begin{align}\tag*{$\blacktriangleleft$}
+\begin{cases}
+    \gamma\varepsilon^2 + \beta\left(\vec\omega, \vec\varepsilon\right)
+        = \dfrac{\left(\vec w - \vec w_O, \vec\omega\right)}{\omega^2};
+\\[2ex]
+    \gamma\left(\vec\omega, \vec\varepsilon\right) + \beta\omega^2
+        = -\dfrac{\left(\vec w - \vec w_O, \vec\varepsilon\right)}
+            {\varepsilon^2};
+\\[3ex]
+    \alpha + \gamma\omega^2 =
+        -\dfrac{\left(\vec w - \vec w_O, \vec\omega,
+            \vec\varepsilon\right)}
+            {\left[\vec\omega \times \vec\varepsilon\right]^2}.
+\end{cases}
+\end{align}
+
 \end{document}
