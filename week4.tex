@@ -303,7 +303,7 @@ $\blacktriangleright$ Рассмотрим произвольную точку �
     \frac{v_{Oy} + \left(\omega_z x - \xcancel{\omega_x z}\right)}
         {\xcancel{\omega_y}} =
     \boxed{\frac{v_{Oz} + \left(\omega_x y - \omega_y x\right)}
-        {\omega_z}}.
+        {\omega_z}}. \label{4.45:canon}
 \end{equation}
 
 \textsl{Примечание.} Результирующая угловая скорость найдена
@@ -322,5 +322,40 @@ $
 $
 \hfill $\blacktriangleleft$
 
+
+\paragraph{4.53.} В~постоянном магнитном поле электрон движется
+по~винтовой линии {\footnotesize
+$
+\begin{cases}
+    x = a \cos bt, \\
+    y = a \sin bt, \\
+    z = ct
+\end{cases}
+$}\\[-2.5ex]
+Найти кинематический винт натурального триэдра точки.
+
+$\blacktriangleright$ Триэдр движется со~скоростью электрона~$\vec v$.
+Найдём его угловую скорость~$\vec\omega$.
+Здесь и~далее скобки $\lfloor \vec V \rfloor$ обозначают
+операцию нормировки вектора.
+\begin{align}
+    \vec\tau &= \lfloor\vec v\rfloor
+        = \left\lfloor \cvec{-ab \sin bt}{ab \cos bt}{c} \right\rfloor;\\
+    \vec n &= \dot{\vec\tau}
+        = \left\lfloor \cvec{-ab^2 \cos bt}{ab^2 \sin bt}{0}\right\rfloor
+        = \cvec{-\cos bt}{\sin bt}{0}; \\
+    \dot{\vec n} &= b \cvec{\sin bt}{\cos bt}{0}
+        = \cvec{\omega_x}{\omega_y}{\omega_z} \times
+            \cvec{-\cos bt}{\sin bt}{0}
+        = \cvec{-\omega_z \sin bt}{-\omega_z \cos bt}
+            {\omega_x \sin bt + \omega_y \cos bt}. \label{4.53:ndot}
+\end{align}
+Поскольку соотношение~\eqref{4.53:ndot} выполняется $\forall t$,
+вектор~$\vec\omega = -b \hat z$.\\
+Ну, что~ж, ищем винт аналогично~4.45 (см.~\eqref{4.45:canon}).
+
+\textbf{Ответ:}\quad винтовое движение с~$\omega' = b$
+и~$v' = c$ вокруг $x = y = 0$.
+\hfill $\blacktriangleleft$
 
 \end{document}
