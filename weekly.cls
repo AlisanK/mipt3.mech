@@ -15,6 +15,7 @@
 \RequirePackage{icomma}
 \RequirePackage{mathrsfs}
 \RequirePackage{bigints}
+\RequirePackage{mathrsfs}
 
 \RequirePackage[T2A,OT1]           {fontenc}
 \RequirePackage[utf8]              {inputenc}
