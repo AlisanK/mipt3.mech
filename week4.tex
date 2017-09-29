@@ -342,16 +342,16 @@ $\blacktriangleright$ Триэдр движется со~скоростью эл
     \vec\tau &= \lfloor\vec v\rfloor
         = \left\lfloor \cvec{-ab \sin bt}{ab \cos bt}{c} \right\rfloor;\\
     \vec n &= \dot{\vec\tau}
-        = \left\lfloor \cvec{-ab^2 \cos bt}{ab^2 \sin bt}{0}\right\rfloor
-        = \cvec{-\cos bt}{\sin bt}{0}; \\
-    \dot{\vec n} &= b \cvec{\sin bt}{\cos bt}{0}
+        = \left\lfloor \cvec{-ab^2 \cos bt}{-ab^2 \sin bt}{0}\right\rfloor
+        = \cvec{-\cos bt}{-\sin bt}{0}; \\
+    \dot{\vec n} &= b \cvec{\sin bt}{-\cos bt}{0}
         = \cvec{\omega_x}{\omega_y}{\omega_z} \times
-            \cvec{-\cos bt}{\sin bt}{0}
-        = \cvec{-\omega_z \sin bt}{-\omega_z \cos bt}
-            {\omega_x \sin bt + \omega_y \cos bt}. \label{4.53:ndot}
+            \cvec{-\cos bt}{-\sin bt}{0}
+        = \cvec{-\omega_z \sin bt}{\omega_z \cos bt}
+            {-\omega_x \sin bt + \omega_y \cos bt}. \label{4.53:ndot}
 \end{align}
 Поскольку соотношение~\eqref{4.53:ndot} выполняется $\forall t$,
-вектор~$\vec\omega = -b \hat z$.\\
+вектор~$\vec\omega = b \hat z$.\\
 Ну, что~ж, ищем винт аналогично~4.45 (см.~\eqref{4.45:canon}).
 
 \textbf{Ответ:}\quad винтовое движение с~$\omega' = b$
