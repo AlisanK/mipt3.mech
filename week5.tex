@@ -1,0 +1,82 @@
+\documentclass{weekly}
+\begin{document}
+\maketitlew{Аналитическая механика}{1}{5}{19}
+
+\paragraph{5.9.} Парашютист массы~$m$ прыгает с~самолёта, летящего
+горизонтально на~высоте~$H$ со~скоростью~$v_0$. По~какой траектории
+движется парашютист при~затяжном прыжке (до~момента раскрытия
+парашюта), если сила сопротивления воздуха~$\vec F = -\beta \vec v$,
+где~$\vec v$~--- скорость парашютиста, а~изменение ускорения свободного
+падения с~высотой не~учитывается? Из~полученного уравнения
+предельным переходом~$\beta \to 0$ найти уравнение траектории
+в~отсутствие сил сопротивления.
+
+$\blacktriangleright$ Введём координатную систему:
+ось~$x$ направим по~$\vec v_0$ (горизонтально),
+ось~$y$~--- вертикально вверх,
+точке прыжка сопоставим координаты~$(0; H)$.
+Запишем уравнения движения парашютиста,
+рассматривая его как~материальную точку (II~закон Ньютона):
+\begin{equation}
+    m\ddot{\vec r} = -\beta\dot{\vec r} + m\vec g
+\quad \Longleftrightarrow \quad
+    \begin{cases}
+        \ddot x + \frac{\beta}{m}\dot x = 0; \\
+        \ddot y + \frac{\beta}{m}\dot y = -g.
+    \end{cases}
+    \label{5.9:Newt}
+\end{equation}
+Интегрируя уравнения~\eqref{5.9:Newt} в~координатах, имеем
+\begin{equation}
+\begin{cases}
+    x(t) = C_{x,1} \exp\left( -\frac{\beta}{m} t \right) + C_{x,2}; \\
+    y(t) = C_{y,1} \exp\left( -\frac{\beta}{m} t \right) + C_{y,2}
+            - \frac{mg}{\beta} t.
+    \label{5.9:xy-gen}
+\end{cases}
+\end{equation}
+Начальные условия задачи Коши:
+\begin{equation}
+\begin{cases}
+    x(0) = 0, & \dot x(0) = v_0; \\
+    y(0) = H, & \dot y(0) = 0.
+    \label{5.9:xy-init}
+\end{cases}
+\end{equation}
+Из~\eqref{5.9:xy-gen} и~\eqref{5.9:xy-init} следует параметрический
+(по~времени) вид траектории:
+\begin{equation}
+\begin{cases}
+    x(t) = \frac{mv_0}{\beta}
+            \left[ 1 - \exp\left( -\frac{\beta}{m} t \right) \right]; \\
+    y(t) = H + \frac{m^2 g}{\beta^2}
+            \left[ 1 - \exp\left( -\frac{\beta}{m} t \right) \right] -
+            \frac{mg}{\beta} t.
+\end{cases}
+\end{equation}
+
+Выразим~$\left[ 1 - \exp\left( -\frac{\beta}{m} t \right) \right]$
+и~$t$ через~$x(t)$ и~подставим в~$y(t)$:
+\begin{gather}
+    1 - \exp\left( -\frac{\beta}{m} t \right)
+        = \frac{\beta x}{m v_0}; \\
+    t = -\frac{m}{\beta} \ln\left(1 - \frac{\beta x}{m v_0}\right); \\
+    y(x) = H + \frac{mg}{\beta v_0} x +
+            \frac{m^2 g}{\beta^2}
+            \ln\left( 1 - \frac{\beta x}{m v_0}\right).
+\end{gather}
+
+Устремив~$\beta \to 0$, разложим последнее слагаемое
+выражения зависимости~$y(x)$ в~ряд Маклорена по~$\beta$ до~$o(\beta^3)$:
+\begin{equation}
+    y(x)\big|_{\beta \to 0} = H + \cancel{\frac{mg}{\beta v_0} x -
+            \frac{mg}{\beta v_0}x} - \frac{g}{2v_0^2}x^2 + o(\beta^3).
+\end{equation}
+
+\textbf{Ответ:}\quad
+$y(x) = H + \dfrac{mg}{\beta v_0} x + \dfrac{m^2 g}{\beta^2}
+\ln\left( 1 - \dfrac{\beta x}{m v_0}\right)
+\stackrel{\beta \to 0}{\simeq} H - \dfrac{g}{2v_0^2}x^2$.
+\hfill $\blacktriangleleft$
+
+\end{document}
