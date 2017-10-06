@@ -183,4 +183,45 @@ $\begin{cases}
 \end{cases}$
 \hfill $\blacktriangleleft$
 
+
+\paragraph{6.34.} Пластина массы~$m$ может двигаться в~неподвижной
+плоскости~$xy$. Положение пластины задаётся координатами~$x$, $y$
+полюса~$P$ и~углом~$\varphi$, который прямая, соединяющая полюс~$P$
+с~центром масс пластины~$C$, образует с~осью~$Ox$.
+Составить уравнения плоскопараллельного движения пластины
+в~переменных~$x, y, \varphi$, если момент инерции пластины
+относительно оси, проходящей через полюс~$P$ перпендикулярно
+плоскости пластины, равен~$J$, а~$PC = l$.
+
+$\blacktriangleright$ По~теореме о~движении центра масс
+($\vec R$~--- главный вектор сил, приложенных к~пластине)
+\begin{equation}
+    \vec R = \cvec{R_x}{R_y}{0}
+        = m\ddot{\vec r}_C
+        = m \dd{{}^2}{t^2} \cvec{x+l\cos\varphi}{y+l\sin\varphi}{0}
+        = m \cvec{\ddot x - l\dot\varphi^2\cos\varphi -
+                l\sin\varphi \ddot\varphi}
+            {\ddot y - l\dot\varphi^2\sin\varphi +
+                l\cos\varphi \ddot\varphi}{0}.
+\end{equation}
+По~определению углового момента
+\begin{equation}
+    L_z = (J - ml^2)\dot\varphi +
+            ml (v_{C,y} \cos\varphi - v_{C,x} \sin\varphi).
+\end{equation}
+Оставшееся соотношение нетрудно продифференцировать,
+при~этом~$\dot L_z = M_z$~--- модуль главного вектора
+момента внешних сил.
+
+\textbf{Ответ:}\quad
+$\begin{cases}
+    R_x = m\ddot x - ml\dot\varphi^2 \cos\varphi -
+            ml\ddot\varphi\sin\varphi; \\
+    R_y = m\ddot y - ml\dot\varphi^2 \sin\varphi +
+            ml\ddot\varphi\cos\varphi; \\
+    M_z = J\ddot\varphi +
+            ml(\ddot y \cos\varphi - \ddot x \sin\varphi).
+\end{cases}$
+\hfill $\blacktriangleleft$
+
 \end{document}
