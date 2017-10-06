@@ -112,4 +112,75 @@ $\blacktriangleright$ К~диску приложены три~силы:
 и~амплитудой~$f_{\max} = ma\omega^2/2$.
 \hfill $\blacktriangleleft$
 
+
+\paragraph{6.30.} В~упражнении с~обручем гимнастка сообщает центру
+однородного кругового обруча радиуса~$r$ горизонтальную скорость~$v_0$
+и~закручивает его с~угловой скоростью~$\omega_0$.
+Коэффициент трения между обручем и~полом равен~$f$
+(во~время движения обруч не~подпрыгивает).
+Как~должны быть связаны величины~$v_0$ и~$\omega_0$ для того,
+чтобы обруч вернулся в~исходное положения за~время~$t$,
+определяемое музыкальным сопровождением?
+
+$\blacktriangleright$ Для~простоты восприятия решения
+условимся считать положительным направление угловой скорости
+\emph{против~часовой стрелки,} вдоль прямой~--- \emph{вправо.}
+
+В~режиме проскальзывания зависимости скорости и~ускорения от~времени
+имеют вид
+\begin{align}
+    v &= v_0 - fgt; \\
+    \omega &= \omega_0 - \frac{fgt}{r}.
+\end{align}
+Проскальзывание прекращается, когда~$v = -\omega r$,
+т.\,е. за~время
+\begin{equation}
+    t_0 = \frac{v_0 + \omega_0 r}{2fg}.
+\end{equation}
+В~случае, если~$t \leqslant t_0$ (проскальзывание не~прекращается
+до~возврата в~начальную точку), достаточно потребовать
+\begin{align}
+    0 = v_0 t - \frac12 fgt^2
+&\then
+    v_0 = \frac12 fgt;
+\\
+    \frac{v_0 + \omega_0 r}{2fg} \geqslant t
+            = \frac{2v_0}{fg}
+&\then
+    3v_0 \leqslant \omega_0 r.
+\end{align}
+
+В~противном случае в~момент окончания проскальзывания скорость
+обруча составит
+\begin{equation}
+    v_1 = \frac{v_0 - \omega_0 r}{2} \leqslant 0,
+\end{equation}
+откуда, кстати, следует ограничение $v_0 \leqslant \omega_0 r$,
+а~оставшийся до~возврата путь
+\begin{equation}
+    S = v_0 t_0 - \frac12 fg t_0^2
+        = \frac{v_0 + \omega_0 r}{2fg} 
+            \left(v_0 - \frac{v_0 + \omega_0 r}{4}\right).
+\end{equation}
+Тогда полное время движения
+\begin{gather}
+    t = t_0 + \frac{S}{\abs{v_1}}
+        = \frac{v_0 + \omega_0 r}{2fg} +
+            \frac{v_0 + \omega_0 r}{2fg}
+            \left(v_0 - \frac{v_0 + \omega_0 r}{4}\right)
+            \frac{2}{\omega_0 r - v_0},
+    \label{6.30:gibberish}
+\end{gather}
+что и~является искомым уравнением, связывающим~$v_0$
+и~$\omega_0$ в~этом случае.
+
+\textbf{Ответ:}\quad
+$\begin{cases}
+    v_0 = fgt/2,
+        & \omega_0 r \geqslant 3v_0; \\
+    \text{ур-ние~\eqref{6.30:gibberish}},
+        & v_0 \leqslant \omega_0 r \leqslant 3v_0.
+\end{cases}$
+\hfill $\blacktriangleleft$
+
 \end{document}
