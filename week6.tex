@@ -109,4 +109,40 @@ $\blacktriangleright$ Рассмотрим момент времени, когд
 \arccos \left( \dfrac{7v_0^2}{17gR} + \dfrac{10}{17} \right)$.
 \hfill $\blacktriangleleft$
 
+
+\begin{wrapfigure}{r}{.23\textwidth}\vspace{-5mm}
+\includegraphics[width=\linewidth]{9-5}
+\end{wrapfigure}
+\paragraph{9.5.} Гладкое кольцо радиуса~$r$, плоскость которого
+вертикальна, вращается с~постоянной угловой скоростью вокруг
+вертикальной оси~$AB$, находящейся на~расстоянии~$a$
+от~центра кольца~$O$. По~кольцу может скользить тяжёлая бусинка.
+Найти угловую скорость, при~которой положение относительного
+равновесия бусинки будет определяться заданным углом~$\varphi_0$,
+если $a + r\sin\varphi_0 \neq 0$. Найти относительную скорость
+бусинки в~зависимости от~угла~$\varphi$, если в~начальный момент
+её скорость относительно кольца была равна нулю,
+а~угол~$\varphi(0) = \varphi_0$.
+
+$\blacktriangleright$ Равнодействующая центробежной и~гравитационной
+сил должна быть направлена по~нормали к~кольцу, иначе равновесия
+не~получится:
+\begin{equation}
+    \tan\varphi_0 = \omega^2(a + r\sin\varphi_0)/g.
+\end{equation}
+
+Во~вращающейся вместе с~кольцом системе отсчёта действуют
+силовые поля гравитации и~инерции с~потенциалами
+\begin{equation}
+    u_g = -gr\cos\varphi; \quad
+    u_c = -\omega^2 (a + r\sin\varphi)^2/2.
+\end{equation}
+
+\textbf{Ответ:}\qquad
+$\omega = \sqrt{\dfrac{g \tan\varphi_0}{a + r\sin\varphi_0}}$,
+\quad
+$v = \sqrt{2} \sqrt{u_g(\varphi_0) - u_g(\varphi)
+    + u_c(\varphi_0) - u_c(\varphi)}$.
+\hfill $\blacktriangleleft$
+
 \end{document}
