@@ -14,4 +14,65 @@ $\blacktriangleright$ ЗСМИ гласит:
 \dfrac{r_{\max}^2}{r_{\min}^2} = \left(\dfrac{1+e}{1-e}\right)^2$.
 \hfill $\blacktriangleleft$
 
+
+\paragraph{8.22.} Комета массы~$m$ движется в~поле тяготения звезды~$S$
+массы~$M$, имея невозмущённую скорость~$v_\infty$ (на~бесконечности)
+и~прицельное расстояние~$d$. Найти уравнение траектории кометы
+и~определить угол~$\theta$, на~который отклоняется её траектория,
+когда она снова удаляется в~бесконечность.
+
+$\blacktriangleright$
+В~полярных координатах
+\begin{align}
+    w_r &= \ddot r - r\dot\varphi^2 = -\frac{\gamma M}{r^2};
+        \label{8.22:wr} \\
+    w_\varphi &= r\ddot\varphi + 2\dot r \dot\varphi = 0.
+\end{align}
+
+Из ЗСМИ следует зависимость~$\dot\varphi(r)$:
+\begin{equation}
+    \dot\varphi = \frac{v_\infty d}{r^2}.
+\end{equation}
+
+Введём замену:
+\begin{align}
+    y &\equiv \frac{1}{r}; &
+    y' &= \dd{y}{\varphi} = -\frac{r'}{r^2}
+        = -\frac{\dot r}{\dot\varphi r^2} = -\frac{\dot r}{v_\infty d}; &
+    y'' &= -\frac{\ddot r r^2}{v_\infty^2 d^2}.
+\end{align}
+Уравнение~\eqref{8.22:wr} примет вид
+\begin{equation}
+    y'' + y = \frac{\gamma M}{v_\infty^2 d^2} \then
+    y = \frac{1}{r} = \frac{\gamma M}{v_\infty^2 d^2} +
+        A \cos(\varphi + \varphi_0).
+\end{equation}
+
+Осталось вспомнить (задать) начальные условия:
+при~$\varphi \to 0$: $y \to 0$, $\dot r \to v_\infty$, откуда
+\begin{gather}
+    A = -\frac{\gamma M}{v_\infty^2 d^2 \cos\varphi_0}; \\
+    y'(0) = -\frac{1}{d} = \frac{\gamma M}{v_\infty^2 d^2} \tan\varphi_0
+        \then \tan\varphi_0 = -\frac{v_\infty^2 d}{\gamma M}
+        \equiv \xi. \\[2ex]
+    r(\varphi) = \frac{\xi d}{1 - \sqrt{1 + \xi^2}
+            \cos\left(\varphi - \arctan\xi\right)}.
+        \label{8.22:fin-eq}
+\end{gather}
+
+Угол~$\pi - \theta$ равен модулю (генеральной) разности корней
+уравнения~$y(\varphi) = 0$:
+\begin{gather}
+    \cos(\varphi - \varphi_0) + \cos\varphi_0 = 0
+    \then
+    2 \sin\frac{\varphi}{2}
+        \sin\left(\frac{\varphi}{2} - \varphi_0\right) = 0
+    \then
+    \pi - \theta = \abs{2\varphi_0}.
+\end{gather}
+
+\textbf{Ответ:}\qquad см.~\eqref{8.22:fin-eq}; \quad
+$\tan\dfrac{\theta}{2} = \dfrac{\gamma M}{v_\infty^2 d}$.
+\hfill $\blacktriangleleft$
+
 \end{document}
