@@ -139,8 +139,7 @@ $\blacktriangleright$ Равнодействующая центробежной 
 \end{equation}
 
 \textbf{Ответ:}\qquad
-$\omega = \sqrt{\dfrac{g \tan\varphi_0}{a + r\sin\varphi_0}}$,
-\quad
+$\omega = \sqrt{\dfrac{g \tan\varphi_0}{a + r\sin\varphi_0}}$; \quad
 $v = \sqrt{2} \sqrt{u_g(\varphi_0) - u_g(\varphi)
     + u_c(\varphi_0) - u_c(\varphi)}$.
 \hfill $\blacktriangleleft$
@@ -218,6 +217,39 @@ $\blacktriangleright$ Запишем для~диска теорему о~дви�
 $x(t) = A \exp\left(+\sqrt{\dfrac23} \omega t\right)
 + B \exp\left(-\sqrt{\dfrac23} \omega t\right)$, \quad
 $A, B \in \mathbb{R}$.
+\hfill $\blacktriangleleft$
+
+
+\begin{wrapfigure}[5]{r}{.15\textwidth}
+\includegraphics[width=\linewidth]{T1}
+\end{wrapfigure}
+\paragraph{T1.} Гладкий однородный цилиндр массы~$m$ и~радиуса~$r$
+опирается на~расположенные на~одном уровне уступы~$A$ и~$B$,
+расстояние между которыми равно~$l$. Определить реакцию опоры~$A$
+в~момент удаления опоры~$B$ и~вертикальное смещение центра цилиндра
+в~момент его отделения от~опоры~$A$.
+
+$\blacktriangleright$ До~отрыва цилиндр движется по~окружности
+с~центром в~$A$. Пусть в~некоторый момент времени линия
+$AO$ ($O$~--- центр цилиндра) образует с~вертикалью угол~$\varphi$:
+\begin{equation}
+    m\frac{v^2}{r} = mg\cos\varphi - N.
+\end{equation}
+В~момент отрыва~$N = 0$, следовательно, $v_1^2 = gr\cos\varphi_1$.
+Кроме того, из~закона сохранения энергии
+\begin{equation}
+    \frac{v_1^2}{r} = 2g(\cos\varphi_0 - \cos\varphi_1)
+        \then \cos\varphi_1 = \frac23 \cos\varphi_0.
+\end{equation}
+Осталось разобраться с~геометрией:
+\begin{gather}
+    \cos\varphi_0 = \sqrt{1 - \left(\frac{l}{2r}\right)^2}; \\
+    \Delta h = r(\cos\varphi_0 - \cos\varphi_1)
+        = \frac{r \cos\varphi_0}{3}.
+\end{gather}
+\textbf{Ответ:}\qquad
+$N_0 = mg \sqrt{1 - \left(\dfrac{l}{2r}\right)^2}$; \quad
+$\Delta h = \dfrac{r}{3} \sqrt{1 - \left(\dfrac{l}{2r}\right)^2}$.
 \hfill $\blacktriangleleft$
 
 \end{document}
