@@ -130,4 +130,43 @@ $\blacktriangleright$ Применим теорему Гюйгенса--Штей
 $\hat J_A^\pi = MR^2/4 \diag{2}{9}{9}$.
 \hfill $\blacktriangleleft$
 
+
+\clearpage
+\begin{wrapfigure}[6]{r}{.2\textwidth}
+    \includegraphics[width=\linewidth]{11-92}
+\end{wrapfigure}
+\paragraph{11.92.} Материальные точки~$A$, $B$ и~$C$ массы~$m$ каждая
+находятся в~вершинах невесомого равнобедренного прямоугольного
+треугольника с~длиной катета, равной~$a$. Найти тензор инерции системы
+для~точки~$B$ в~указанных на~рисунке осях. Найти главные оси
+для~точки~$B$. Показать, что~эллипсоид инерции для~точки~$A$
+является эллипсоидом вращения.
+
+$\blacktriangleright$ По~определению:
+\begin{align}
+    \hat J_A &= ma^2 \begin{pmatrix}
+        2 & 0 & 0 \\
+        0 & 1 & 0 \\
+        0 & 0 & 1
+    \end{pmatrix};
+&
+    \hat J_B &= ma^2 \begin{pmatrix}
+        3 & 0 & 0 \\
+        0 & 2 & 1 \\
+        0 & 1 & 1
+    \end{pmatrix}.
+\end{align}
+Аналогично~11.11, выпишем матрицу собственных векторов~$\hat J_B$.
+Вдоль них направлены искомые оси.
+\begin{equation}
+    \mathcal{M} = \begin{pmatrix}
+        1 & 0 & 0 \\
+        0 & \frac{1 + \sqrt{5}}{2} & \frac{1 - \sqrt{5}}{2} \\
+        0 & 1 & 1
+    \end{pmatrix}.
+\end{equation}
+\emph{Процедура сама по~себе очень простая, хотя и~требующая
+некоторой аккуратности.}
+\hfill $\blacktriangleleft$
+
 \end{document}
