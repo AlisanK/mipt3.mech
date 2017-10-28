@@ -137,7 +137,7 @@ $\hat y$~--- вправо, $\hat z = \hat x \times \hat y$.
 Угловая скорость и~угловое ускорение кольца
 \begin{align}
     \vec\Omega &= -\varphi_0 \omega \hat z; \\
-    \vec\varepsilon &= +\varphi_0 \omega^2 \hat z.
+    \vec\varepsilon &= \overline{0}.
 \end{align}
 
 Можем теперь применить теоремы о~сложении скоростей и~ускорений:
@@ -161,32 +161,26 @@ $\hat y$~--- вправо, $\hat z = \hat x \times \hat y$.
 помогает справиться~Wolfram Alpha. \emph{Для~$\vec w_A$
 аналогичная проверка производиться не~будет.}
 \begin{align}
-\begin{split}
+\tag*{}
     \vec w_A &= \vec\varepsilon \times \vec r_A -
             \Omega^2 \vec r_A + \vec w_A' +
             2\vec\Omega \times \vec v_A'
-        = \varphi_0 \omega^2 \hat z \times
-            \cvec{1 + \cos\frac{at^2}{R}}{\sin\frac{at^2}{R}}{0} -\\&- \varphi_0^2 \omega^2
+        = - \varphi_0^2 \omega^2
             \cvec{1 + \cos\frac{at^2}{R}}{\sin\frac{at^2}{R}}{0} +
             \cvec{-\frac{4a^2 t^2}{R}\cos\frac{at^2}{R} -
             2a\sin\frac{at^2}{R}}
             {-\frac{4a^2 t^2}{R}\sin\frac{at^2}{R} +
-            2a\cos\frac{at^2}{R}}{0} -
+            2a\cos\frac{at^2}{R}}{0} -\\[1ex]&-
             2\varphi_0 \omega \hat z \times
-            2at \cvec{-\sin\frac{at^2}{R}}{\cos\frac{at^2}{R}}{0} = \\
-        &= \cvec
-            {-\varphi_0\omega^2\sin\frac{a\pi^2}{\omega^2 R} -
-                2\varphi_0^2\omega^2\cos^2\frac{a\pi^2}{2\omega^2 R}-
-                \frac{4a^2 \pi^2}{\omega^2 R}\cos\frac{a\pi^2}
+            2at \cvec{-\sin\frac{at^2}{R}}{\cos\frac{at^2}{R}}{0}
+        = \cvec
+            {-\frac{4a^2 \pi^2}{\omega^2 R}\cos\frac{a\pi^2}
                 {\omega^2 R} - 2a\sin\frac{a\pi^2}{\omega^2 R} +
                 4\varphi_0\pi\omega a \cos\frac{a\pi^2}{\omega^2 R}}
-            {2\varphi_0\omega^2\cos^2\frac{a\pi^2}{2\omega^2 R} -
-                \varphi_0^2\omega^2\sin\frac{a\pi^2}{\omega^2 R} -
-                \frac{4a^2 \pi^2}{\omega^2 R}\sin\frac{a\pi^2}
+            {-\frac{4a^2 \pi^2}{\omega^2 R}\sin\frac{a\pi^2}
                 {\omega^2 R} + 2a\cos\frac{a\pi^2}{\omega^2 R} +
                 4\varphi_0\pi\omega a \sin\frac{a\pi^2}{\omega^2 R}}
             {0}. \label{2.14:wA}
-\end{split}
 \end{align}
 
 \textbf{Ответ:}\quad \eqref{2.14:vA}, \eqref{2.14:wA}.
