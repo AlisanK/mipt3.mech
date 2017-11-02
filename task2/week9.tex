@@ -1,0 +1,62 @@
+\documentclass{weekly}
+\begin{document}
+\maketitlew{Аналитическая механика}{2}{9}{32}
+
+\paragraph{11.19.} Тонкий однородный диск массы~$m$ катится
+без~скольжения по~неподвижной горизонтальной плоскости,
+образуя с~нею угол~$\alpha$. Центр диска~$C$ описывает
+горизонтальную окружность с~постоянной линейной скоростью~$v$
+Точка~$O$ пересечения оси симметрии диска с~горизонтальной
+плоскостью неподвижна.
+
+$\blacktriangleright$ Диск совершает два вращения:
+вокруг своей оси~($\vec\omega$) и~вокруг вертикали~($\vec\Omega$),
+проведённой через~$O$.
+С~учётом условия непроскальзывания (точка касания диска
+и~плоскости~$Q$) и~заданной скорости центра
+\begin{gather}
+    \Omega = \frac{v}{R/\tan\alpha \cdot \cos\alpha}
+        = \frac{v}{R} \frac{\sin^2\alpha}{\cos\alpha}; \\
+    \left(\vec\omega + \vec\Omega\right) \times \overline{OQ}
+        = \overline{0}
+    \then \omega_y = -\Omega_y,\quad
+        \omega_x = -\frac{\omega_y}{\tan\alpha}.
+\end{gather}
+Верно, результирующая угловая скорость направлена
+вдоль~$OQ$ (см., например, 4.34):
+\begin{equation}
+    \omega_\Sigma = \frac{\Omega}{\tan\alpha} \hat x
+        = \frac{v}{R\cos\alpha} \hat x.
+\end{equation}
+
+Кинетическая энергия вращения (в~главных осях):
+\begin{equation}
+    T_r = \frac{1}{2}
+        \cvec{\omega_\Sigma\sin\alpha}{0}{\omega_\Sigma\cos\alpha}^T
+        \begin{pmatrix}
+            \frac{1}{4} mR^2 & 0 & 0 \\
+            0 & \frac{1}{4} mR^2 & 0 \\
+            0 & 0 & \frac{1}{2} mR^2
+        \end{pmatrix}
+        \cvec{\omega_\Sigma\sin\alpha}{0}{\omega_\Sigma\cos\alpha}
+        = \left(\frac{1}{8} \sin^2\alpha 
+        + \frac{1}{4} \cos^2\alpha\right) \omega_\Sigma^2 mR^2.
+\end{equation}
+
+Окончательно запишем
+\begin{equation}
+    T = T_r + \frac{1}{2} mv^2
+        = \left(\frac{1}{8} \sin^2\alpha +
+            \frac{1}{4} \cos^2\alpha\right)
+            m \frac{v^2}{\cos^2\alpha} + \frac{1}{2} mv^2
+        = mv^2 \left(\frac{3}{4} + \frac{1}{8}\tan^2\alpha\right).
+\end{equation}
+
+\textbf{Ответ:} \qquad
+$T = \dfrac{mv^2}{8} \left(6 + \tan^2\alpha\right)$.
+\hfill $\blacktriangleleft$
+
+\textsl{Примечание.} В~настоящем решении~$\alpha = 0$
+при~<<вертикальном>> расположении диска.
+
+\end{document}
