@@ -12,7 +12,7 @@
 |                                                                             | 23   X | [**Сдача задания 1**](https://github.com/uteshev/mipt3.anmech/blob/master/task1/task1.pdf) | 👍👍 |
 |[ **8** ](https://github.com/uteshev/mipt3.anmech/blob/master/pdf/week8.pdf) | 27   X | 11.8(6) 11.11 11.92 T2 11.17 | 👍 |
 |    9                                                                        | 03  XI | 11.19 11.23 11.30 11.84 11.108 11.111 |    |
-|   10                                                                        | 10  XI |                              |    |
+|   10                                                                        | 10  XI | 11.74 11.118 Т3              |    |
 |   11                                                                        | 17  XI |                              |    |
 |   12                                                                        | 24  XI |                              |    |
 |   13                                                                        | 01 XII |                              |    |
